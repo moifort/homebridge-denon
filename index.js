@@ -27,8 +27,8 @@ class Denon {
         // Setup services
         this.switchService = new Service.Switch(this.name)
         this.switchService.getCharacteristic(Characteristic.On)
-            .on('get', this.getState)
-            .on('set', this.setState)
+            .on('get', this.getState.bind(this))
+            .on('set', this.setState.bind(this))
     }
 
     async getState(callback) {
@@ -39,7 +39,7 @@ class Denon {
             this.log(`Scenario is ${isScenarioActive}`)
             callback(null, isScenarioActive)
         } catch (e) {
-            this.log.error(e.toString())
+            this.log.error(e)
             callback(e)
         }
     }
@@ -56,7 +56,7 @@ class Denon {
             }
             callback(null)
         } catch (e) {
-            this.log.error(e.toString())
+            this.log.error(e)
             callback(e)
         }
     }
