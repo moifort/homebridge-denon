@@ -35,7 +35,7 @@ class Denon {
         this.log('Getting current state..')
         try {
             const state = await this.receiver.getState()
-            const isScenarioActive = state.power === true && state.volumeLevel === this.defaultVolume && state.input === this.defaultInput
+            const isScenarioActive = state.power === true && state.input === this.defaultInput
             this.log(`Scenario is ${isScenarioActive}`)
             callback(null, isScenarioActive)
         } catch (e) {
