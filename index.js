@@ -1,5 +1,5 @@
-const AVReceiver = require('marantz-avr')
-var Service, Characteristic
+const AVReceiver = require('marantz-avr-fix')
+let Service, Characteristic
 
 
 module.exports = function (homebridge) {

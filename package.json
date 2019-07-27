@@ -1,6 +1,6 @@
 {
   "name": "homebridge-denon-switch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "keywords": [
@@ -13,6 +13,6 @@
     "homebridge": ">=0.2.0"
   },
   "dependencies": {
-    "marantz-avr": "^1.1.0"
+    "marantz-avr-fix": "^1.1.1"
   }
 }
