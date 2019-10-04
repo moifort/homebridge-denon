@@ -10,9 +10,8 @@ sudo npm install -g homebridge-denon-switch
 
 # Configuration
 
-config.json
+`config.json` file
 
-Example:
 ```javascript
 {
   "bridge": {
